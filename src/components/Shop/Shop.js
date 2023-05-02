@@ -7,10 +7,13 @@ const Shop = () => {
     //console.log(fakeData);
     const first10 = fakeData.slice(0, 10);
     const [products, setProducts] = useState(first10);
+    const [cart, setCart] = useState([]);
     //console.log(products);
 
     const handleAddProduct = (product) => {
         console.log("Product Added", product);
+        const newCart = [...cart, product];
+        setCart(newCart);
     }
 
     return (
@@ -23,7 +26,7 @@ const Shop = () => {
                 </ul>
             </div>
             <div className="cart-container">
-                <h3>This is cart</h3>
+                <h3>This is cart {cart.length}</h3>
             </div>
         </div>
     );
