@@ -4,20 +4,24 @@ import fakeData from '../../fakeData';
 import { useState } from 'react';
 
 const Shop = () => {
-//console.log(fakeData);
-const first10 = fakeData.slice(0,10);
-const [products, setProducts] = useState(first10);
-//console.log(products);
+    //console.log(fakeData);
+    const first10 = fakeData.slice(0, 10);
+    const [products, setProducts] = useState(first10);
+    //console.log(products);
 
     return (
-        <div>
-         <h3>{products.length}</h3>
-         <ul>
-            {
-                products.map(product => <li>{product.name}</li>)
-            }
+        <div className="shop-container">
+            <div className="product-container">
+                <ul>
+                    {
+                        products.map(product => <li>{product.name}</li>)
+                    }
 
-         </ul>
+                </ul>
+            </div>
+            <div className="cart-container">
+                <h3>This is cart</h3>
+            </div>
         </div>
     );
 };
