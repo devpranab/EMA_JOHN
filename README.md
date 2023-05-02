@@ -14,3 +14,13 @@
 - Pass eventhandler to child component and handle event
 - Cart state setup and update cart state on add to cart button click
 - Total Product price, shipping cost, Tax and total price
+
+### Day 02
+- React Router, Install React Router Dom
+- Setup Router, Router path, exact path not found path
+- Dynamic path, set route path parameter
+- Load data based on route parameter, conditional formatting
+- Different ways to handle state, Make button navigate to a route
+- Save state on Localstore, store key and count, virtual DOM
+- Retrieve data from local storage, set cart from saved state
+- Review Component, Review Items, CSS in Javascript style
