@@ -19,6 +19,7 @@
 - React Router, Install React Router Dom
 - Setup Router, Router path, exact path not found path
 - Dynamic path, set route path parameter
+- replaced older router-dom for reload issue
 - Load data based on route parameter, conditional formatting
 - Different ways to handle state, Make button navigate to a route
 - Save state on Localstore, store key and count, virtual DOM
