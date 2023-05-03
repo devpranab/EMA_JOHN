@@ -12,6 +12,7 @@ const Cart = (props) => {
         const product = cart[i];
         console.log(product);
         total = total + product.price  * product.quantity;
+        //debugger;
     }
 
     //shipping
