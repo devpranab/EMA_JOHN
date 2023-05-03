@@ -32,6 +32,13 @@
 - React Developer Tool, Chrome extension, Refactor add to Cart
 - Sync State in multiple route, calculate total price in review page
 - Place Order, Clear state, show conditional image
-- Review of route dynamic parameters and useParams
-- React Router Nested Routes
-- Explore more about Conditional Rendering
+
+### Day 04
+- Create login route and set login form (Auth Integration)
+- Create user context and set logged in user in context
+- Create Private Route and set auth Redirect
+- Redirect to the initial page and use Router Link
+- [optional] refactor Login manager to modularize code
+- [optional] more refactoring of sign in method
+- Implement signout and redirect from private route
+- Create shipment form using React hook form

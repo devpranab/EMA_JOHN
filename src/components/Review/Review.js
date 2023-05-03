@@ -5,10 +5,12 @@ import fakeData from '../../fakeData';
 import ReviewItem from '../ReviewItem/ReviewItem';
 import Cart from '../Cart/Cart';
 import happyImg from '../../images/giphy.gif';
+import {useNavigate} from 'react-router-dom';
 
 const Review = () => {
     const [cart, setCart] = useState([]);
     const [orderPlaced, setOrderPlaced] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
         //cart
@@ -33,11 +35,12 @@ const Review = () => {
         removeFromDatabaseCart(productKey);
     }
 
-    const handlePlaceOrder = () => {
+    const handleProceedCheckout = () => {
         //console.log("Order Place");
-        setCart([]);
-        setOrderPlaced(true);
-        processOrder();
+        // setCart([]);
+        // setOrderPlaced(true);
+        // processOrder();
+        navigate("/shipment");
     }
 
     let thankYou;
@@ -59,7 +62,7 @@ const Review = () => {
             </div>
             <div className="cart-container">
                <Cart cart={cart}>
-                <button className="main-button" onClick={handlePlaceOrder}>Place Order</button>
+                <button className="main-button" onClick={handleProceedCheckout}>Proceed Checkout</button>
                </Cart>
             </div>
         </div>
