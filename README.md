@@ -25,3 +25,13 @@
 - Save state on Localstore, store key and count, virtual DOM
 - Retrieve data from local storage, set cart from saved state
 - Review Component, Review Items, CSS in Javascript style
+
+### Day 03
+- Remove From Cart, Pass Parameter on click, remove from state
+- Share components among multiple routes, share data on cart
+- React Developer Tool, Chrome extension, Refactor add to Cart
+- Sync State in multiple route, calculate total price in review page
+- Place Order, Clear state, show conditional image
+- Review of route dynamic parameters and useParams
+- React Router Nested Routes
+- Explore more about Conditional Rendering
