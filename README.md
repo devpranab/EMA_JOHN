@@ -21,7 +21,7 @@
 - Dynamic path, set route path parameter
 - replaced older router-dom for reload issue
 - Load data based on route parameter, conditional formatting
-- Different ways to handle state, Make button navigate to a route(parenting, contextapi, redux, db, localstorage)
+- Different ways to handle state, Make button navigate to a route(parenting/contextapi/redux/onlinedb/localstorage)
 - Save state on Localstore, store key and count, virtual DOM
 - Retrieve data from local storage, set cart from saved state
 - Review Component, Review Items, CSS in Javascript style
