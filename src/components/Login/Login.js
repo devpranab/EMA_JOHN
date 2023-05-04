@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
-import './Login.css';
 import { UserContext} from '../../App';
+import { useNavigate, useLocation } from 'react-router-dom';
+import './Login.css';
 import firebase from "firebase/app";
 import "firebase/auth";
 // Initialize Firebase
@@ -23,6 +23,10 @@ const Login = () => {
     const navigate = useNavigate();
 
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    //console.log(loggedInUser.email);
+
+    const location = useLocation();
+    let {from} = location.state || {from: {pathname: "/shipment"}};
 
     const googleProvider = new firebase.auth.GoogleAuthProvider();
     const fbProvider = new firebase.auth.FacebookAuthProvider();
@@ -105,7 +109,6 @@ const Login = () => {
           newUserInfo.error = "";
           newUserInfo.success = true;
           setUser(newUserInfo);
-          setLoggedInUser(newUserInfo);
           updateUserName(user.name);
         })
         .catch(error => {
@@ -123,7 +126,9 @@ const Login = () => {
           newUserInfo.error = "";
           newUserInfo.success = true;
           setUser(newUserInfo);
+          setLoggedInUser(newUserInfo);
           console.log("sign in user info:", res.user);
+          navigate(from);
         })
         .catch(error => {
           //Handle Errors here
