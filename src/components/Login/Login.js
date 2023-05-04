@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
+import { UserContext} from '../../App';
 import firebase from "firebase/app";
 import "firebase/auth";
 // Initialize Firebase
@@ -20,6 +21,8 @@ const Login = () => {
     });
 
     const navigate = useNavigate();
+
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     const googleProvider = new firebase.auth.GoogleAuthProvider();
     const fbProvider = new firebase.auth.FacebookAuthProvider();
@@ -102,6 +105,7 @@ const Login = () => {
           newUserInfo.error = "";
           newUserInfo.success = true;
           setUser(newUserInfo);
+          setLoggedInUser(newUserInfo);
           updateUserName(user.name);
         })
         .catch(error => {
