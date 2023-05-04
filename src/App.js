@@ -9,6 +9,7 @@ import Login from './components/Login/Login';
 import Shipment from './components/Shipment/Shipment';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { createContext, useState } from 'react';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 export const UserContext = createContext();
 
@@ -23,9 +24,9 @@ function App() {
         <Route path="/shop" element={<Shop />}/>
         <Route path="/" element={<Shop />}/>
         <Route path="/review" element={<Review />}/>
-        <Route path="/inventory" element={<Inventory />}/>
         <Route path="/login" element={<Login />}/>
-        <Route path="/shipment" element={<Shipment />}/>
+        <Route path="/inventory" element={<PrivateRoute><Inventory /></PrivateRoute>}/>
+        <Route path="/shipment" element={<PrivateRoute><Shipment /></PrivateRoute>}/>
         <Route path="/product/:productKey" element={<ProductDetails />}/>
         <Route path="*" element={<NotFound />}/>
       </Routes>
